@@ -1,6 +1,6 @@
 <template>
   <section
-      class="mb-8 rounded-xl bg-white shadow-sm p-6 transition-all hover:shadow-md"
+      class="rounded-xl bg-white shadow-sm p-6 transition-all hover:shadow-md"
   >
     <div class="flex flex-col md:flex-row items-start md:items-center gap-6 relative">
       <!-- LOGO -->
@@ -54,7 +54,7 @@
         <!-- 域名可复制 -->
         <div class="flex items-center mb-3 group relative">
           <span
-              class="text-gray-500 font-mono cursor-pointer"
+              class="text-gray-500 font-mono cursor-pointer hover:text-orange-400"
               @click="copyToClipboard(site.domain)"
           >
             {{ site.domain }}
@@ -62,7 +62,7 @@
           <span
               class="ml-2 text-xs text-gray-400 opacity-0 group-hover:opacity-100 transition-opacity"
           >
-            {{ t('site.overview.copy') }}
+            {{ t('common.copy') }}
           </span>
 
           <!-- 浮动提示 -->
@@ -71,7 +71,7 @@
                 v-if="copied"
                 class="absolute left-0 -top-6 bg-gray-800 text-white text-xs px-2 py-0.5 rounded shadow-sm"
             >
-              {{ t('site.overview.copied') }}
+              {{ t('common.copied') }}
             </div>
           </transition>
         </div>

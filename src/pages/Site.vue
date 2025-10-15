@@ -24,7 +24,7 @@
     </div>
 
     <!-- 顶部概览区 -->
-    <div class="m-10">
+    <div class="mx-10 my-8">
       <SiteOverview
           v-if="siteInfo"
           :site="{
@@ -38,12 +38,20 @@
       />
     </div>
 
-    <SitePerformance
-        v-if="sitePingRecord && siteHttpRecord"
-        :pingRecord="sitePingRecord"
-        :httpRecord="siteHttpRecord"
-    />
+    <div class="mx-10 mb-8">
+      <SitePerformance
+          v-if="sitePingRecord && siteHttpRecord"
+          :pingRecord="sitePingRecord"
+          :httpRecord="siteHttpRecord"
+      />
+    </div>
 
+    <div class="mx-10 mb-8">
+      <SiteHttpPanel
+          v-if="siteHttpRecord"
+          :record="siteHttpRecord"
+      />
+    </div>
 
     页面开发中...不代表最终品质
     <div class="h-1100"></div>
@@ -69,6 +77,7 @@ import { useLangStore } from '@/store/langStore.ts'
 import { getSiteDetail, getSitePingRecord, getSiteHttpRecord, getSiteDnsRecord } from '@/utils/api/nav'
 import SiteOverview from '@/components/site/SiteOverview.vue'
 import SitePerformance from '@/components/site/SitePerformance.vue'
+import SiteHttpPanel from '@/components/site/SiteHttpPanel.vue'
 import {i18n} from "@/main.ts";
 
 import type { SiteInfo, PingRecord, HttpRecord, DnsRecord, DnsItem } from '@/types/nav'

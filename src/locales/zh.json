@@ -1,4 +1,14 @@
 {
+  "common": {
+    "loading": "加载中...",
+    "loadMore": "加载更多",
+    "expand": "展开",
+    "collapse": "收起",
+    "yes": "是",
+    "no": "否",
+    "copy": "点击复制",
+    "copied": "已复制！"
+  },
   "navbar": {
     "slogan": "GoFurry 是致力于维护兽圈基础建设的公益组织。"
   },
@@ -17,7 +27,6 @@
   },
   "home": {
     "searchPlaceholder": "搜索 {count}+ 个兽文化网站...",
-    "loadMore": "加载更多",
     "collapseCards": "收起卡片",
     "siteData": "本站数据",
     "hotNews": "热门资讯"
@@ -44,7 +53,7 @@
     "update": "更新"
   },
   "searchBox": {
-    "loading": "加载中...",
+
     "searchSuggest": "搜索建议",
     "noSuggest": "暂无搜索建议",
     "platformCate": {
@@ -73,9 +82,7 @@
       "nsfw": "NSFW",
       "welfare": "公益网站",
       "non-welfare": "盈利网站",
-      "goto": "访问网站",
-      "copy": "点击复制",
-      "copied": "已复制！"
+      "goto": "访问网站"
     },
     "performance": {
       "responseTime": "响应时间",
@@ -92,6 +99,37 @@
       "time": "时间",
       "status": "状态",
       "latency": "延迟"
+    },
+    "siteHttpPanel": {
+      "httpRecord": "HTTP 记录",
+      "visitUrl": "访问 URL",
+      "statusCode": "状态码",
+      "responseTime": "响应时间",
+      "contentSize": "内容大小",
+      "server": "服务器",
+      "pageTitle": "页面标题",
+      "redirectPath": "重定向路径",
+      "responseHeader": "响应头",
+      "metadata": "元数据",
+      "encoding": "编码",
+      "description": "描述",
+      "keywords": "关键词",
+      "tlsRecord": "TLS 记录",
+      "encryptionProtocol": "加密协议",
+      "cipherSuite": "密码套件",
+      "certInfo": "证书信息",
+      "validityPeriod": "有效期",
+      "remaining": "剩余",
+      "issuer": "颁发者",
+      "organization": "机构",
+      "coveredDomains": "覆盖域名",
+      "isCaCert": "是否为 CA 证书",
+      "publicKeyAlg": "公钥算法",
+      "signatureAlg": "签名算法",
+      "email": "邮箱",
+      "collapseAlgDetails": "收起算法细节",
+      "expandAlgDetails": "查看算法细节",
+      "day": "天"
     }
   }
 }

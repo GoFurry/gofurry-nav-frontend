@@ -1,4 +1,14 @@
 {
+  "common": {
+    "loading": "Loading...",
+    "loadMore": "Load More",
+    "expand": "Expand",
+    "collapse": "Collapse",
+    "yes": "Yes",
+    "no": "No",
+    "copy": "click to copy",
+    "copied": "copied!"
+  },
   "navbar": {
     "slogan": "GoFurry is a non-profit organization."
   },
@@ -17,7 +27,6 @@
   },
   "home": {
     "searchPlaceholder": "Search {count}+ furry sites...",
-    "loadMore": "Load More",
     "collapseCards": "Collapse Cards",
     "siteData": "Site Data",
     "hotNews": "Hot News"
@@ -44,7 +53,6 @@
     "update": "Updates"
   },
   "searchBox": {
-    "loading": "Loading...",
     "searchSuggest": "Search Suggestions",
     "noSuggest": "No Search Suggestions",
     "platformCate": {
@@ -73,9 +81,7 @@
       "nsfw": "NSFW",
       "welfare": "Public Welfare Website",
       "non-welfare": "For-Profit Website",
-      "goto": "Visit Website",
-      "copy": "click to copy",
-      "copied": "copied!"
+      "goto": "Visit Website"
     },
     "performance": {
       "responseTime": "Response Time",
@@ -92,6 +98,37 @@
       "time": "Time",
       "status": "Status",
       "latency": "Latency"
+    },
+    "siteHttpPanel": {
+      "httpRecord": "HTTP Record",
+      "visitUrl": "Visit URL",
+      "statusCode": "Status Code",
+      "responseTime": "Response Time",
+      "contentSize": "Content Size",
+      "server": "Server",
+      "pageTitle": "Page Title",
+      "redirectPath": "Redirect Path",
+      "responseHeader": "Response Header",
+      "metadata": "Metadata",
+      "encoding": "Encoding",
+      "description": "Description",
+      "keywords": "Keywords",
+      "tlsRecord": "TLS Record",
+      "encryptionProtocol": "Encryption Protocol",
+      "cipherSuite": "Cipher Suite",
+      "certInfo": "Certificate Info",
+      "validityPeriod": "Validity Period",
+      "remaining": "Remaining",
+      "issuer": "Issuer",
+      "organization": "Organization",
+      "coveredDomains": "Covered Domains",
+      "isCaCert": "Is CA Certificate",
+      "publicKeyAlg": "Public Key Algorithm",
+      "signatureAlg": "Signature Algorithm",
+      "email": "Email",
+      "collapseAlgDetails": "Collapse Algorithm Details",
+      "expandAlgDetails": "View Algorithm Details",
+      "day": "days"
     }
   }
 }

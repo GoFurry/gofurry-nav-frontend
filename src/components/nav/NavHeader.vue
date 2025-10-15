@@ -24,7 +24,7 @@
                 : 'hover:text-orange-400 hover:drop-shadow-[0_0_5px_rgb(251,146,60)]'"
               @click="goTo('/home')"
           >
-            <img src="../../assets/svgs/home.svg" alt="home" class="w-5 h-5" />
+            <img src="@/assets/svgs/home.svg" alt="home" class="w-5 h-5" />
             {{ t('navHeader.home') }}
           </div>
 
@@ -35,7 +35,7 @@
                 : 'hover:text-orange-400 hover:drop-shadow-[0_0_5px_rgb(251,146,60)]'"
               @click="goTo('/updates')"
           >
-            <img src="../../assets/svgs/tv.svg" alt="update" class="w-5 h-5" />
+            <img src="@/assets/svgs/tv.svg" alt="update" class="w-5 h-5" />
             {{ t('navHeader.update') }}
           </div>
 
@@ -46,7 +46,7 @@
                 : 'hover:text-orange-400 hover:drop-shadow-[0_0_5px_rgb(251,146,60)]'"
               @click="goTo('/swagger')"
           >
-            <img src="../../assets/svgs/api.svg" alt="api" class="w-5 h-5" />
+            <img src="@/assets/svgs/api.svg" alt="api" class="w-5 h-5" />
             API
           </div>
         </div>
@@ -54,16 +54,16 @@
         <!-- 右侧联系方式 -->
         <div class="flex items-center gap-4">
           <div>
-            <img src="../../assets/icons/bilibili.svg" alt="bilibili" class="w-6 h-6 cursor-pointer opacity-90 hover:opacity-100 transition-transform transform hover:scale-125 hover:drop-shadow-[0_0_6px_rgb(240,128,128)]" @click="openLink('https://space.bilibili.com/37124259')" />
+            <img src="@/assets/icons/bilibili.svg" alt="bilibili" class="w-6 h-6 cursor-pointer opacity-90 hover:opacity-100 transition-transform transform hover:scale-125 hover:drop-shadow-[0_0_6px_rgb(240,128,128)]" @click="openLink('https://space.bilibili.com/37124259')" />
           </div>
           <div class="hidden sm:block">
-            <img src="../../assets/icons/weibo.svg" alt="weibo" class="w-6 h-6 cursor-pointer opacity-90 hover:opacity-100 transition-transform transform hover:scale-125 hover:drop-shadow-[0_0_6px_rgb(255,69,0)]" @click="openLink('https://www.weibo.com/u/6233129221')" />
+            <img src="@/assets/icons/weibo.svg" alt="weibo" class="w-6 h-6 cursor-pointer opacity-90 hover:opacity-100 transition-transform transform hover:scale-125 hover:drop-shadow-[0_0_6px_rgb(255,69,0)]" @click="openLink('https://www.weibo.com/u/6233129221')" />
           </div>
           <div class="hidden sm:block">
-            <img src="../../assets/icons/qq.svg" alt="qq" class="w-6 h-6 cursor-pointer opacity-90 hover:opacity-100 transition-transform transform hover:scale-125 hover:drop-shadow-[0_0_6px_rgb(56,189,248)]" @click="openLink('https://qm.qq.com/q/Kje9kbk6Cy')" />
+            <img src="@/assets/icons/github.svg" alt="github" class="w-6 h-6 cursor-pointer opacity-90 hover:opacity-100 transition-transform transform hover:scale-125 hover:drop-shadow-[0_0_6px_rgb(56,189,248)]" @click="openLink('https://github.com/GoFurry')" />
           </div>
           <div class="hidden sm:block">
-            <img src="../../assets/icons/twitter.svg" alt="twitter" class="w-6 h-6 cursor-pointer opacity-90 hover:opacity-100 transition-transform transform hover:scale-125 hover:drop-shadow-[0_0_6px_rgb(29,155,240)]" @click="openLink('https://x.com/InLoveWithCharr')" />
+            <img src="@/assets/icons/twitter.svg" alt="twitter" class="w-6 h-6 cursor-pointer opacity-90 hover:opacity-100 transition-transform transform hover:scale-125 hover:drop-shadow-[0_0_6px_rgb(29,155,240)]" @click="openLink('https://x.com/InLoveWithCharr')" />
           </div>
         </div>
       </div>

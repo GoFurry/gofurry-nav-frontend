@@ -1,5 +1,5 @@
 <template>
-  <section class="mb-8 mx-10">
+  <section class="">
     <!-- 核心指标 -->
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
       <!-- 响应时间 -->

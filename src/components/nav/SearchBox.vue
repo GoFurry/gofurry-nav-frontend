@@ -45,7 +45,7 @@
       >
         <!-- 标题 -->
         <li class="px-4 py-2 text-xs text-gray-500 bg-gray-50 border-b border-gray-100">
-          <template v-if="isLoading">{{ t('searchBox.loading') }}</template>
+          <template v-if="isLoading">{{ t('common.loading') }}</template>
           <template v-else>{{ t('searchBox.searchSuggest') }} ({{ suggestions.length }})</template>
         </li>
 
