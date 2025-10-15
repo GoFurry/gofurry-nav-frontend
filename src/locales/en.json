@@ -1,0 +1,97 @@
+{
+  "navbar": {
+    "slogan": "GoFurry is a non-profit organization."
+  },
+  "sidebar": {
+    "nav": "Navigation",
+    "tools": "Tools",
+    "games": "Games",
+    "survey": "Survey",
+    "about": "About Us",
+    "join": "Join Us"
+  },
+  "footer": {
+    "rights": "All rights reserved",
+    "license": "Content licensed under CC-BY-NC-SA 4.0",
+    "icp": "ICP No. 2025158691-2 (China)"
+  },
+  "home": {
+    "searchPlaceholder": "Search {count}+ furry sites...",
+    "loadMore": "Load More",
+    "collapseCards": "Collapse Cards",
+    "siteData": "Site Data",
+    "hotNews": "Hot News"
+  },
+  "dashboard": {
+    "siteData": "Site Data",
+    "totalViews": "Total Views",
+    "yearViews": "Yearly Views",
+    "monthViews": "Monthly Views",
+    "groupStats": "Site Type Statistics",
+    "weeklyVisits": "7-Day Visits",
+    "countryVisits": "The country of the visitor",
+    "provinceVisits": "The province of the visitor",
+    "cityVisits": "The city of the visitor",
+    "visits": "Visits",
+    "visitsUnit": "Views / Time",
+    "countUnit": "Sites / Type",
+    "country": "Country",
+    "province": "Province",
+    "city": "City"
+  },
+  "navHeader": {
+    "home": "Home",
+    "update": "Updates"
+  },
+  "searchBox": {
+    "loading": "Loading...",
+    "searchSuggest": "Search Suggestions",
+    "noSuggest": "No Search Suggestions",
+    "platformCate": {
+      "search": "Search",
+      "games": "Games",
+      "tools": "Tools",
+      "survey": "Survey"
+    },
+    "platformName": {
+      "baidu": "Baidu",
+      "bing": "Bing",
+      "google": "Google",
+      "bilibili": "Bilibili",
+      "xiaohongshu": "Rednote",
+      "zhihu": "Zhihu",
+      "weibo": "Weibo",
+      "twitter": "X (Twitter)",
+      "itchIo": "itch.io",
+      "steam": "Steam"
+    }
+  },
+  "site": {
+    "title": "Site details",
+    "overview": {
+      "sfw": "SFW",
+      "nsfw": "NSFW",
+      "welfare": "Public Welfare Website",
+      "non-welfare": "For-Profit Website",
+      "goto": "Visit Website",
+      "copy": "click to copy",
+      "copied": "copied!"
+    },
+    "performance": {
+      "responseTime": "Response Time",
+      "pageLoadTime": "Page Load Time",
+      "httpStatusCode": "HTTP Status Code",
+      "accessStatus": "Access Status",
+      "tlsVersion": "TLS Version",
+      "securityProtocol": "Security Encryption Protocol",
+      "certValidity": "Certificate Validity",
+      "certRemainingTime": "Remaining Validity",
+      "latencyTrend": "Latency Trend",
+      "averageLatency": "Average Latency",
+      "packetLossRate": "Packet Loss Rate",
+      "time": "Time",
+      "status": "Status",
+      "latency": "Latency"
+    }
+  }
+}

@@ -1,0 +1,97 @@
+{
+  "navbar": {
+    "slogan": "GoFurry 是致力于维护兽圈基础建设的公益组织。"
+  },
+  "sidebar": {
+    "nav": "站点导航",
+    "tools": "实用工具",
+    "games": "热门兽游",
+    "survey": "兽圈调研",
+    "about": "关于本站",
+    "join": "加入我们"
+  },
+  "footer": {
+    "rights": "保留所有权利",
+    "license": "本网站内容采用 CC-BY-NC-SA 4.0 授权协议",
+    "icp": "蜀ICP备2025158691号-2"
+  },
+  "home": {
+    "searchPlaceholder": "搜索 {count}+ 个兽文化网站...",
+    "loadMore": "加载更多",
+    "collapseCards": "收起卡片",
+    "siteData": "本站数据",
+    "hotNews": "热门资讯"
+  },
+  "dashboard": {
+    "siteData": "本站数据",
+    "totalViews": "总访问量",
+    "yearViews": "本年访问量",
+    "monthViews": "本月访问量",
+    "groupStats": "站点类型统计",
+    "weeklyVisits": "七日访问量",
+    "countryVisits": "来访者国家",
+    "provinceVisits": "来访者省份",
+    "cityVisits": "来访者城市",
+    "visits": "访问量",
+    "visitsUnit": "浏览量/时间",
+    "countUnit": "站点数/类型",
+    "country": "国家",
+    "province": "省份",
+    "city": "城市"
+  },
+  "navHeader": {
+    "home": "首页",
+    "update": "更新"
+  },
+  "searchBox": {
+    "loading": "加载中...",
+    "searchSuggest": "搜索建议",
+    "noSuggest": "暂无搜索建议",
+    "platformCate": {
+      "search": "搜索",
+      "games": "游戏",
+      "tools": "工具",
+      "survey": "调研"
+    },
+    "platformName": {
+      "baidu": "百度",
+      "bing": "必应",
+      "google": "谷歌",
+      "bilibili": "B站",
+      "xiaohongshu": "小红书",
+      "zhihu": "知乎",
+      "weibo": "微博",
+      "twitter": "推特",
+      "itchIo": "itch.io",
+      "steam": "Steam"
+    }
+  },
+  "site": {
+    "title": "站点详情",
+    "overview": {
+      "sfw": "SFW",
+      "nsfw": "NSFW",
+      "welfare": "公益网站",
+      "non-welfare": "盈利网站",
+      "goto": "访问网站",
+      "copy": "点击复制",
+      "copied": "已复制！"
+    },
+    "performance": {
+      "responseTime": "响应时间",
+      "pageLoadTime": "页面加载耗时",
+      "httpStatusCode": "HTTP状态码",
+      "accessStatus": "访问状态",
+      "tlsVersion": "TLS版本",
+      "securityProtocol": "安全加密协议",
+      "certValidity": "证书有效期",
+      "certRemainingTime": "剩余有效期",
+      "latencyTrend": "延迟趋势",
+      "averageLatency": "平均延迟",
+      "packetLossRate": "丢包率",
+      "time": "时间",
+      "status": "状态",
+      "latency": "延迟"
+    }
+  }
+}
