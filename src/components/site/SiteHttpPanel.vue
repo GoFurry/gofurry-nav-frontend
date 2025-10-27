@@ -92,7 +92,7 @@
         <div class="mb-6">
           <div class="flex items-center justify-between mb-2">
             <h4 class="text-sm font-bold text-gray-500">{{ t('site.siteHttpPanel.responseHeader') }}</h4>
-            <button class="text-xs text-blue-400" @click="toggleSection('httpHeaders')">
+            <button class="text-xs text-blue-400" @click.stop="toggleSection('httpHeaders')">
               {{ sections.httpHeaders ? t('common.collapse') : t('common.expand') }}
             </button>
           </div>
@@ -112,7 +112,7 @@
         <div>
           <div class="flex items-center justify-between mb-2">
             <h4 class="text-sm font-bold text-gray-500">{{ t('site.siteHttpPanel.metadata') }}</h4>
-            <button class="text-xs text-blue-400" @click="toggleSection('httpMeta')">
+            <button class="text-xs text-blue-400" @click.stop="toggleSection('httpMeta')">
               {{ sections.httpMeta ? t('common.collapse') : t('common.expand') }}
             </button>
           </div>
@@ -193,7 +193,7 @@
 
           <!-- 算法细节 -->
           <div>
-            <button class="text-xs text-blue-400" @click="toggleSection('tlsDetails')">
+            <button class="text-xs text-blue-400" @click.stop="toggleSection('tlsDetails')">
               {{ sections.tlsDetails ? t('site.siteHttpPanel.collapseAlgDetails') : t('site.siteHttpPanel.expandAlgDetails') }}
             </button>
 

@@ -141,6 +141,7 @@ import gamepadIcon from '@/assets/svgs/gamepad.svg'
 import clipboardIcon from '@/assets/svgs/clipboard.svg'
 import featherIcon from '@/assets/svgs/feather.svg'
 import pawIcon from '@/assets/svgs/paw.svg'
+import panelIcon from '@/assets/svgs/panel.svg'
 
 const route = useRoute()
 const isActive = (path: string) => route.path.startsWith(path)
@@ -170,7 +171,8 @@ const menuItems = computed(() => [
   { label: t('sidebar.nav'), path: '/nav', icon: compassIcon },
   { label: t('sidebar.tools'), path: '/tools', icon: briefcaseIcon },
   { label: t('sidebar.games'), path: '/games', icon: gamepadIcon },
-  { label: t('sidebar.survey'), path: '/survey', icon: clipboardIcon }
+  { label: t('sidebar.survey'), path: '/survey', icon: clipboardIcon },
+  { label: t('sidebar.panel'), path: '/panel', icon: panelIcon }
 ])
 
 const bottomMenuItems = computed(() => [

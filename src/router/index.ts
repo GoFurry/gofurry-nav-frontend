@@ -4,6 +4,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 const routes = [
     { path: '/', redirect: '/nav' },
     { path: '/home', redirect: '/nav' }, // 首页
+    { path: '/panel', component: () => import('@/pages/Dashboard.vue') }, // 关于页
     { path: '/about', component: () => import('@/pages/About.vue') }, // 关于页
     { path: '/join', component: () => import('@/pages/Join.vue') }, // 加入我们
     { path: '/nav', component: () => import('@/pages/NavPage.vue') }, // 导航页
