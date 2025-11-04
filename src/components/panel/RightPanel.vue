@@ -18,7 +18,7 @@
       <div class="h-1 bg-gradient-to-r from-blue-500 to-purple-500"></div>
 
       <div class="wrap flex-1 overflow-hidden">
-        <ul ref="marqueeList" class="marquee-content">
+        <ul ref="marqueeList" class="flex-col">
           <li
               v-for="(site, index) in props.latestSites"
               :key="site.name + site.create_time"
@@ -98,7 +98,7 @@ const initMarquee = () => {
   container.appendChild(clone)
 
   let top = 0
-  const speed = 0.3 // ⬅️ 调慢速度
+  const speed = 0.3
   const height = content.offsetHeight
 
   marqueeInterval = setInterval(() => {
@@ -106,7 +106,7 @@ const initMarquee = () => {
     if (top >= height) top = 0
     content.style.transform = `translateY(-${top}px)`
     clone.style.transform = `translateY(-${top}px)`
-  }, 16) // 更流畅（约60fps）
+  }, 16)
 }
 
 const handleResize = () => {
@@ -131,9 +131,4 @@ watch(() => props.groupCount, () => {
 </script>
 
 <style scoped>
-.marquee-content {
-  display: flex;
-  flex-direction: column;
-  will-change: transform;
-}
 </style>

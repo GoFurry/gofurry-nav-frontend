@@ -11,7 +11,10 @@
   "dependencies": {
     "@tailwindcss/vite": "^4.1.13",
     "axios": "^1.12.2",
+    "dom-to-image-more": "^3.7.2",
     "echarts": "^6.0.0",
+    "file-saver": "^2.0.5",
+    "html2canvas": "^1.4.1",
     "pinia": "^3.0.3",
     "swagger-ui": "^5.29.3",
     "swagger-ui-dist": "^5.29.3",

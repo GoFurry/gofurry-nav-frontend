@@ -131,6 +131,20 @@
       "collapseAlgDetails": "收起算法细节",
       "expandAlgDetails": "查看算法细节",
       "day": "天"
+    },
+    "siteDnsPanel": {
+      "dnsRecord": "DNS 记录",
+      "type": "类型",
+      "value": "值",
+      "more": "更多",
+      "country": "国家",
+      "child": "子记录",
+      "record": "记录",
+      "none": "暂无",
+      "unk": "未知",
+      "hijacked": "被劫持",
+      "reversePtr": "反向解析",
+      "city": "城市"
     }
   }
 }

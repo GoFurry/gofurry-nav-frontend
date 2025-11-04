@@ -130,6 +130,20 @@
       "collapseAlgDetails": "Collapse Algorithm Details",
       "expandAlgDetails": "View Algorithm Details",
       "day": "days"
+    },
+    "siteDnsPanel": {
+      "dnsRecord": "DNS Record",
+      "type": "type",
+      "value": "value",
+      "more": "more",
+      "country": "Country",
+      "child": "child record",
+      "record": "record",
+      "none": "none",
+      "unk": "Unknown",
+      "hijacked": "Hijacked",
+      "reversePtr": "Reverse Ptr",
+      "city": "City"
     }
   }
 }

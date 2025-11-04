@@ -2,6 +2,10 @@
 import request from '@/utils/request.ts'
 import type {GroupCount, ViewsCount, RegionStat, CommonStat, SiteModel, PingModel} from '@/types/stat.ts'
 
+// Nav API
+const apiUrl = import.meta.env.VITE_API_BASE_URL
+request.defaults.baseURL = apiUrl
+
 // 获取分组统计
 export function getGroupCount(lang :string): Promise<GroupCount[]> {
     return request.get('/stat/chart/group/count', { params: { lang } })

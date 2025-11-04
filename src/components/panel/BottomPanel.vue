@@ -46,7 +46,6 @@ const props = defineProps({
 let chartInstances = {}
 
 const initPieCharts = () => {
-  // ✅ 改进后的环形图配置（带外部标签）
   const createPieOption = (dataMap, title) => {
     const data = Object.entries(dataMap).map(([name, value]) => ({ name, value }))
     return {
@@ -65,7 +64,7 @@ const initPieCharts = () => {
           radius: ['45%', '70%'],
           center: ['50%', '55%'],
           avoidLabelOverlap: true,
-          minAngle: 12, // 防止扇区过小挤压文字
+          minAngle: 12,
           label: {
             show: true,
             position: 'outside',

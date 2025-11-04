@@ -2,6 +2,10 @@
 import request from '@/utils/request.ts'
 import type {Site, Group, SiteInfo, HttpRecord, DnsRecord, PingRecord} from '@/types/nav.ts'
 
+// Nav API
+const apiUrl = import.meta.env.VITE_API_BASE_URL
+request.defaults.baseURL = apiUrl
+
 // 获取站点列表
 export function getSites(lang: string): Promise<Site[]> {
     return request.get(`/nav/page/site/list`, { params: { lang } })

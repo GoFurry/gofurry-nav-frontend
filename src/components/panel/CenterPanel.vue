@@ -1,8 +1,8 @@
 <template>
   <div class="center-panel h-full flex flex-col">
     <!-- 顶部数据条 -->
-    <div class="barnav mb-4 p-3 rounded-md bg-gradient-to-r from-[#001c3d] to-[#002e5e] shadow-lg">
-      <div class="barbox">
+    <div class="mb-4 p-3 rounded-md bg-gradient-to-r from-[#001c3d] to-[#002e5e] shadow-lg">
+      <div>
         <ul class="grid grid-cols-3 gap-2">
           <li class="text-center text-2xl font-bold text-yellow-400 counter">
             {{ commonStat?.site_count ?? '-' }}
@@ -15,7 +15,7 @@
           </li>
         </ul>
       </div>
-      <div class="barbox2 mt-2">
+      <div class="mt-2">
         <ul class="grid grid-cols-3 gap-2">
           <li class="text-center text-blue-200 text-sm">收录站点数</li>
           <li class="text-center text-blue-200 text-sm">采集域名数</li>
@@ -25,8 +25,8 @@
     </div>
 
     <!-- 地图容器 -->
-    <div class="mapbox flex-1 p-3 rounded-md relative overflow-hidden">
-      <div class="map w-full h-full relative">
+    <div class="flex-1 p-3 rounded-md relative overflow-hidden">
+      <div class="w-full h-full relative">
         <div class="absolute inset-0 flex items-center justify-center animate-spin-clockwise">
           <img src="@/assets/images/lbx.png" alt="" class="w-[80%] h-[80%] object-contain">
         </div>
@@ -59,7 +59,7 @@ const props = defineProps({
 let mapChart = null
 const mapContainer = ref(null)
 
-// 城市经纬度映射（可扩展）
+// 城市经纬度映射
 const geoCoordMap = {
   '上海': [121.4737, 31.2304],
   '北京': [116.4074, 39.9042],

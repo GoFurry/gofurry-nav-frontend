@@ -10,7 +10,7 @@
     <Loading v-if="isLoading" />
 
     <!-- 主体内容 -->
-    <div v-if="!isLoading" class="main-content p-4">
+    <div v-if="!isLoading" class="p-4">
       <div class="flex h-[65vh] gap-4">
         <div class="w-1/4 lg:block hidden">
           <LeftPanel
@@ -55,8 +55,9 @@ import CenterPanel from '@/components/panel/CenterPanel.vue'
 import RightPanel from '@/components/panel/RightPanel.vue'
 import BottomPanel from '@/components/panel/BottomPanel.vue'
 import bgMain from '@/assets/images/bg.jpg'
+import { useLangStore } from '@/store/langStore.ts'
 
-// 引入 API
+// API
 import {
   getGroupCount,
   getViewsCount,
@@ -81,6 +82,8 @@ import type {
 // 加载状态
 const isLoading = ref(true)
 
+const langStore = useLangStore()
+
 // 定义响应式数据
 const groupCount = ref<GroupCount[]>([])
 const viewsCount = ref<ViewsCount | null>(null)
@@ -96,7 +99,7 @@ onMounted(async () => {
     isLoading.value = true
 
     // 并行请求所有接口
-    const lang = 'zh' // 根据语言可替换
+    const lang = langStore.lang // 根据语言可替换
     const [
       groupRes,
       viewsRes,
@@ -137,8 +140,4 @@ onMounted(async () => {
 </script>
 
 <style scoped>
-.main-content {
-  height: calc(100vh - 100px);
-  box-sizing: border-box;
-}
 </style>
