@@ -38,7 +38,7 @@
       <!-- 站点网格 -->
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-4 mt-2 relative">
         <div
-            v-for="site in sites.filter(s => group.sites.includes(s.id))"
+            v-for="site in sites.filter(s => group.sites.includes(s.id) && s.nsfw !== '1')"
             :key="`${group.id}-${site.id}`"
             class="relative bg-white rounded-xl shadow hover:shadow-lg transition-shadow duration-200 p-4 cursor-pointer flex gap-3"
             @click="goDomain(getDomains(site))"
@@ -65,9 +65,6 @@
                   class="w-4 h-4 ml-auto"
                   alt="flag"
               />
-
-              <!-- NSFW -->
-              <span v-if="site.nsfw === '1'" class="ml-1">🔞</span>
 
               <!-- 商业/公益 -->
               <img
