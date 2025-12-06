@@ -47,7 +47,10 @@ let chartInstances = {}
 
 const initPieCharts = () => {
   const createPieOption = (dataMap, title) => {
-    const data = Object.entries(dataMap).map(([name, value]) => ({ name, value }))
+    const data = Object.entries(dataMap)
+        .map(([name, value]) => ({ name, value }))
+        .sort((a, b) => b.value - a.value)
+        .slice(0, 12) // 前12个
     return {
       title: {
         text: title,

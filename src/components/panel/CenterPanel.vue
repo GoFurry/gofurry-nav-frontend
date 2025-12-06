@@ -68,7 +68,11 @@ const geoCoordMap = {
   '成都': [104.0665, 30.5728],
   '武汉': [114.3054, 30.5931],
   '深圳': [114.0579, 22.5431],
-  '郑州市': [113.6254, 34.7466]
+  '郑州市': [113.6254, 34.7466],
+  '张家口市': [114.8860, 40.7682],
+  '苏州市': [120.6196, 31.2990],
+  '长沙': [112.9389, 28.2282],
+  '南京市': [118.7969, 32.0603]
 }
 
 // 转换 cityStat 数据为 echarts series 格式
@@ -110,9 +114,9 @@ const initMapChart = () => {
         type: 'effectScatter',
         coordinateSystem: 'geo',
         data: getSeriesData(props.cityStat),
-        symbolSize: val => val[2] / 80 + 4,  // 小一点的点
+        symbolSize: val => 6,  // 点大小
         showEffectOn: 'render',
-        rippleEffect: { period: 6, scale: 3, brushType: 'stroke' }, // 涟漪也调小
+        rippleEffect: { period: 6, scale: 3, brushType: 'stroke' }, // 涟漪
         itemStyle: { color: '#ffeb7b', shadowBlur: 10, shadowColor: '#fff' },
         label: { formatter: '{b}', position: 'right', show: true, color: '#ffeb7b' },
         zlevel: 2
