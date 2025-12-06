@@ -111,7 +111,7 @@ const route = useRoute()
 const bgImage = ref<string | null>(null)
 const formattedDateTime = ref('')
 const saying = ref('')
-const apiurl = import.meta.env.VITE_API_BASE_URL || ''
+const apiurl = import.meta.env.VITE_NAV_API_BASE_URL || ''
 const t = (key: string) => i18n.global.t(key)
 
 

@@ -7,11 +7,8 @@ import axios from 'axios'
 * @Version: V1.0.0
 * */
 
-// const apiUrl = 'http://[::1]:9999/api'
-const apiUrl = import.meta.env.VITE_API_BASE_URL
 
 const service = axios.create({
-    baseURL: apiUrl,
     timeout: 10000,
     // withCredentials: true,
 })
