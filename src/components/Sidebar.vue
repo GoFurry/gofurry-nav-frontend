@@ -110,7 +110,7 @@
       </nav>
 
       <!-- 版权 -->
-      <div class="hidden lg:flex items-center justify-center gap-1 py-2 text-gray-400 hover:text-orange-600 text-xs">
+      <div class="hidden lg:flex items-center justify-start gap-1 py-2 px-4 text-gray-400 hover:text-orange-600 text-xs">
         <img src="../assets/svgs/copyright.svg" alt="cc" class="w-4 h-4" />
         <span>2025 GoFurry</span>
       </div>

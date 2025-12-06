@@ -81,10 +81,8 @@
             <span>{{ formattedDateTime }}</span>
           </div>
           <iframe
-              width="300"
-              scrolling="no"
+              width="275"
               height="25"
-              frameborder="0"
               allowtransparency="true"
               src="https://i.tianqi.com/index.php?c=code&id=34&icon=1&num=3"
           ></iframe>
