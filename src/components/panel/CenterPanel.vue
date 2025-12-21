@@ -49,6 +49,8 @@
 import { ref, onMounted, onUnmounted, watch } from 'vue'
 import * as echarts from 'echarts'
 import chinaMapData from '@/assets/json/china.json'
+import { geoCoordMap } from '@/utils/const'
+
 
 // Props
 const props = defineProps({
@@ -58,22 +60,6 @@ const props = defineProps({
 
 let mapChart = null
 const mapContainer = ref(null)
-
-// 城市经纬度映射
-const geoCoordMap = {
-  '上海': [121.4737, 31.2304],
-  '北京': [116.4074, 39.9042],
-  '常州市': [119.9816, 31.8170],
-  '广州市': [113.2644, 23.1291],
-  '成都': [104.0665, 30.5728],
-  '武汉': [114.3054, 30.5931],
-  '深圳': [114.0579, 22.5431],
-  '郑州市': [113.6254, 34.7466],
-  '张家口市': [114.8860, 40.7682],
-  '苏州市': [120.6196, 31.2990],
-  '长沙': [112.9389, 28.2282],
-  '南京市': [118.7969, 32.0603]
-}
 
 // 转换 cityStat 数据为 echarts series 格式
 const getSeriesData = (cityStat) => {
