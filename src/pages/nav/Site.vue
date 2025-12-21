@@ -8,7 +8,7 @@
           class="text-lg font-semibold flex items-center gap-2 cursor-pointer hover:text-gray-600"
           @click="goTo('/home')"
       >
-        <img src="@/assets/svgs/home-dark.svg" alt="home" class="w-5 h-5" />
+        <img src="../../assets/svgs/home-dark.svg" alt="home" class="w-5 h-5" />
         {{ t('site.title') }}
       </h2>
     </div>
@@ -88,7 +88,7 @@
 import { ref, onMounted, watch } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import { useLangStore } from '@/store/langStore.ts'
-import { getSiteDetail, getSitePingRecord, getSiteHttpRecord, getSiteDnsRecord } from '@/utils/api/nav'
+import { getSiteDetail, getSitePingRecord, getSiteHttpRecord, getSiteDnsRecord } from '@/utils/api/nav.ts'
 import SiteOverview from '@/components/site/SiteOverview.vue'
 import SitePerformance from '@/components/site/SitePerformance.vue'
 import SiteHttpPanel from '@/components/site/SiteHttpPanel.vue'
@@ -96,7 +96,7 @@ import SiteDnsPanel from '@/components/site/SiteDnsPanel.vue'
 import NavBar from '@/components/NavBar.vue'
 import Footer from '@/components/Footer.vue'
 import { i18n } from '@/main.ts'
-import type { SiteInfo, PingRecord, HttpRecord, DnsRecord, DnsItem } from '@/types/nav'
+import type { SiteInfo, PingRecord, HttpRecord, DnsRecord, DnsItem } from '@/types/nav.ts'
 import { safeJsonParse } from '@/utils/util.ts'
 
 const t = (key: string) => i18n.global.t(key)

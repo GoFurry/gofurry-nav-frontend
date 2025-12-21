@@ -5,7 +5,7 @@
         class="flex items-center justify-between p-4 border-b border-gray-200 bg-gray-100 backdrop-blur-sm shadow-sm"
     >
       <h2 class="text-lg font-semibold text-gray-800 flex items-center gap-2">
-        <img src="@/assets/svgs/api-dark.svg" alt="api" class="w-5 h-5" />
+        <img src="../../assets/svgs/api-dark.svg" alt="api" class="w-5 h-5" />
         本站 API 文档
       </h2>
       <button
