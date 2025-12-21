@@ -1,10 +1,38 @@
-// /utils/api/game.ts
-import request from '@/utils/request.ts'
+import { createRequest } from '@/utils/request.ts'
+import type {
+    AnonymousReviewModel,
+    GameGroupRecord,
+    GamePanelRecord,
+    SearchItemModel,
+    TopPriceRecord
+} from '@/types/game.ts'
 
-// Game API
-const apiUrl = import.meta.env.VITE_GAME_API_BASE_URL
-request.defaults.baseURL = apiUrl
+const gameRequest = createRequest(import.meta.env.VITE_GAME_API_BASE_URL)
 
 export function getGameList() {
-    return request.get("/game/list")
+    return gameRequest.get("/game/list")
 }
+
+export function getGameMainInfo(): Promise<GameGroupRecord> {
+    return gameRequest.get(`/game/info/main`)
+}
+
+export function getGameMainPanel(): Promise<GamePanelRecord> {
+    return gameRequest.get("/game/panel/main")
+}
+
+export function getLatestGameNews(): Promise<TopPriceRecord> {
+    return gameRequest.get("/game/update/latest")
+}
+
+export function getRandomGame(): Promise<string> {
+    return gameRequest.get("/recommend/game/random")
+}
+
+export function getSearchSimple(lang: string, txt: string): Promise<SearchItemModel[]> {
+    return gameRequest.post("/search/game/simple", { txt, lang });
+}
+
+export function getLatestReview(): Promise<AnonymousReviewModel[]> {
+    return gameRequest.get("/review/latest")
+} 
