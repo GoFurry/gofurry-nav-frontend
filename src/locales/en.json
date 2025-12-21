@@ -2,12 +2,15 @@
   "common": {
     "loading": "Loading...",
     "loadMore": "Load More",
+    "showMore": "Show More",
     "expand": "Expand",
     "collapse": "Collapse",
     "yes": "Yes",
     "no": "No",
     "copy": "click to copy",
-    "copied": "copied!"
+    "copied": "copied!",
+    "game": "game",
+    "time": "time"
   },
   "navbar": {
     "slogan": "GoFurry is a non-profit organization."
@@ -144,6 +147,60 @@
       "hijacked": "Hijacked",
       "reversePtr": "Reverse Ptr",
       "city": "City"
+    }
+  },
+  "game": {
+    "panel": {
+      "playerCount": "Player Count",
+      "playerCountDesc": "Reflect the popularity",
+      "recentOnline": "Recent Online",
+      "onlinePeak": "Peak Online",
+      "topPrice": "Top Prices",
+      "topPriceDesc": "Reflect market positioning",
+      "global": "Global",
+      "china": "China",
+      "discount": "Discount",
+      "none": "none"
+    },
+    "news": {
+      "title": "Update News",
+      "desc": "Recent furry game update news from steam"
+    },
+    "action": {
+      "shortcutFunction": "Shortcut Functions",
+      "dailyGame": "Daily Game",
+      "oneClickAddToLibrary": "Add to Library",
+      "steamOneClickAddRun": "Add to Steam Library & Run",
+      "inputAppIDInstallFreeGame": "Enter AppID to install the corresponding free game or app with one click",
+      "startInstall": "Start Installation",
+      "inputContentRunConnectServer": "Enter the corresponding content to run or connect to the server",
+      "runGame": "Run Game",
+      "connectServer": "Connect to Server",
+      "relatedWebsites": "Related Websites",
+      "installTip": "Steam AppID, for example 386180",
+      "runTip": "AppID or IP:Port"
+    },
+    "site": {
+      "steam": "The world's largest PC game platform",
+      "itch": "Indie game creation, publishing platform",
+      "steamDB": "Famous steam game data analytics",
+      "steamBase": "Steam game and player statistics",
+      "playTracker": "Cross-platform player statistics",
+      "sensorTower": "Game market performance",
+      "gamalytic": "Steam sales estimates and analytics",
+      "metacritic": "Aggregated critic and user reviews",
+      "pcGamingWiki": "PC game information database",
+      "gameFAQs": "Game guides, FAQs, walkthroughs",
+      "byrut": "Unofficial game resource sharing",
+      "f95zoneFurry": "Community for indie furry games",
+      "srkGames": "Furry game resource site",
+      "furryGames": "Furry game information",
+      "afdian": "China's largest sponsorship platform",
+      "patreon": "Subscription sponsorship platform",
+      "kickstarter": "Crowdfunding platform"
+    },
+    "search": {
+      "simple": "Search games"
     }
   }
 }

@@ -2,12 +2,15 @@
   "common": {
     "loading": "加载中...",
     "loadMore": "加载更多",
+    "showMore": "查看更多",
     "expand": "展开",
     "collapse": "收起",
     "yes": "是",
     "no": "否",
     "copy": "点击复制",
-    "copied": "已复制！"
+    "copied": "已复制！",
+    "game": "游戏",
+    "time": "时间"
   },
   "navbar": {
     "slogan": "GoFurry 是致力于维护兽圈基础建设的公益组织。"
@@ -145,6 +148,60 @@
       "hijacked": "被劫持",
       "reversePtr": "反向解析",
       "city": "城市"
+    }
+  },
+  "game": {
+    "panel": {
+      "playerCount": "在线人数",
+      "playerCountDesc": "在线人数可以反映游戏的热门程度",
+      "recentOnline": "近期在线",
+      "onlinePeak": "在线峰值",
+      "topPrice": "价格 Top",
+      "topPriceDesc": "价格可以反映游戏的市场定位",
+      "global": "全球区",
+      "china": "国区",
+      "discount": "折扣",
+      "none": "暂无"
+    },
+    "news": {
+      "title": "更新情报",
+      "desc": "近期 Steam 兽游更新公告"
+    },
+    "action": {
+      "shortcutFunction": "快捷功能",
+      "dailyGame": "每日一游",
+      "oneClickAddToLibrary": "一键入库",
+      "steamOneClickAddRun": "Steam 一键入库 & 运行",
+      "inputAppIDInstallFreeGame": "输入AppID, 一键安装对应免费游戏或应用",
+      "startInstall": "启动安装",
+      "inputContentRunConnectServer": "输入对应内容后运行或连接服务器",
+      "runGame": "运行游戏",
+      "connectServer": "连接服务器",
+      "relatedWebsites": "相关网站",
+      "installTip": "Steam AppID，例如 386180",
+      "runTip": "AppID 或 IP:Port"
+    },
+    "site": {
+      "steam": "全球最大的 PC 游戏发行与游玩平台",
+      "itch": "独立游戏创作、发布与社区平台",
+      "steamDB": "最知名的 Steam 游戏数据分析平台",
+      "steamBase": "图表多元化的 Steam 数据分析平台",
+      "playTracker": "跨平台游戏活跃度分析网站",
+      "sensorTower": "游戏市场表现与收入趋势分析平台",
+      "gamalytic": "Steam 销量预估与商业数据分析平台",
+      "metacritic": "游戏媒体评分与玩家评价聚合平台",
+      "pcGamingWiki": "PC 游戏修复、优化与兼容性资料库",
+      "gameFAQs": "游戏攻略、问答与玩家社区资料站",
+      "byrut": "非官方游戏下载与资源分享网站",
+      "f95zoneFurry": "Furry 题材独立游戏社区",
+      "srkGames": "Furry 类游戏资源站",
+      "furryGames": "Furry 类游戏信息站",
+      "afdian": "中国最大的创作者赞助平台",
+      "patreon": "全球最大的创作者订阅赞助平台",
+      "kickstarter": "全球知名的创意项目众筹平台"
+    },
+    "search": {
+      "simple": "搜索游戏"
     }
   }
 }
