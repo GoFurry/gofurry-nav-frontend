@@ -8,12 +8,20 @@
         <priority>1.0</priority>
     </url>
 
+    <!-- 游戏页 -->
+    <url>
+        <loc>https://go-furry.com/games</loc>
+        <lastmod>2025-11-12</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.9</priority>
+    </url>
+
     <!-- 站点详情页 -->
     <url>
         <loc>https://go-furry.com/site/:id</loc>
         <lastmod>2025-11-12</lastmod>
         <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
+        <priority>0.7</priority>
     </url>
 
     <!-- 本站数据页 -->
@@ -21,7 +29,7 @@
         <loc>https://go-furry.com/panel</loc>
         <lastmod>2025-11-12</lastmod>
         <changefreq>daily</changefreq>
-        <priority>0.7</priority>
+        <priority>0.6</priority>
     </url>
 
     <!-- API文档页 -->
@@ -29,6 +37,6 @@
         <loc>https://go-furry.com/swagger</loc>
         <lastmod>2025-11-12</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.6</priority>
+        <priority>0.5</priority>
     </url>
 </urlset>
