@@ -31,7 +31,7 @@
     >
       <div
           v-if="showResults && results.length > 0"
-          class="absolute z-50 mt-2 w-full bg-white/90 backdrop-blur-md rounded-lg shadow-lg p-3 grid grid-cols-2 gap-3 pointer-events-auto"
+          class="absolute z-50 mt-2 bg-white/90 backdrop-blur-md rounded-lg shadow-lg p-3 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-3 2xl:grid-cols-5 pointer-events-auto"
           @mouseenter="hovering = true"
           @mouseleave="hovering = false"
       >

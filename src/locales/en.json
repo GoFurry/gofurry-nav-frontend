@@ -10,7 +10,16 @@
     "copy": "click to copy",
     "copied": "copied!",
     "game": "game",
-    "time": "time"
+    "time": "time",
+    "cancel": "Cancel",
+    "confirm": "Confirm",
+    "query": "Query",
+    "sort": "Sort",
+    "tag": "Tag",
+    "keyword": "Keyword",
+    "pageSize": "Page Size",
+    "total": "Total",
+    "record": "Records"
   },
   "navbar": {
     "slogan": "GoFurry is a non-profit organization."
@@ -200,7 +209,15 @@
       "kickstarter": "Crowdfunding platform"
     },
     "search": {
-      "simple": "Search games"
+      "simple": "Search games",
+      "advancedFilter": "Advanced Filter",
+      "publishTime": "Publish Time",
+      "updateTime": "Update Time",
+      "highestRating": "Highest Rating",
+      "mostComments": "Most Comments",
+      "latestInfo": "Latest Info",
+      "comment": "Comment",
+      "jumpPage": "Jump To Page"
     }
   }
 }

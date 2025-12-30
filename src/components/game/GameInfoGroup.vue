@@ -7,11 +7,13 @@
         {{ group.title }}
       </h3>
 
-      <div
-          class="text-md text-orange-900 hover:text-orange-700 transition cursor-pointer hover:bg-orange-200 p-2 rounded-md"
+      <router-link
+          to="/games/search"
+          class="text-md text-orange-900 hover:text-orange-700 transition cursor-pointer
+         hover:bg-orange-200 p-2 rounded-md"
       >
-        {{t("common.showMore")}}
-      </div>
+        {{ t("common.showMore") }}
+      </router-link>
     </div>
 
     <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">

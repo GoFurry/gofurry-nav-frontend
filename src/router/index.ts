@@ -2,8 +2,8 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
 const routes = [
-    { path: '/', redirect: '/nav' },
-    { path: '/home', redirect: '/nav' }, // 首页
+    { path: '/', redirect: { path: '/nav', query: { mode: 'sfw' } } },
+    { path: '/home', redirect: { path: '/nav', query: { mode: 'sfw' } } }, // 首页
     { path: '/panel', component: () => import('@/pages/nav/Dashboard.vue') }, // 数据大屏
     { path: '/about', component: () => import('@/pages/other/About.vue') }, // 关于页
     { path: '/join', component: () => import('@/pages/other/Join.vue') }, // 加入我们
@@ -16,7 +16,7 @@ const routes = [
     { path: '/site/:id', component: () => import('@/pages/nav/Site.vue') }, // 站点详情页
     { path: '/games/:id', component: () => import('@/pages/game/Game.vue') }, // 游戏详情页
     { path: '/games/news/:id', component: () => import('@/pages/game/GameNews.vue') }, // 游戏新闻页
-    { path: '/games/list', component: () => import('@/pages/game/GameList.vue') }, // 游戏搜索页
+    { path: '/games/search', component: () => import('@/pages/game/GameSearch.vue') }, // 游戏搜索页
     { path: '/games/creator', component: () => import('@/pages/game/GameCreators.vue') }, // 游戏创作者页
 
 ]

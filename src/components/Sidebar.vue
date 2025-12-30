@@ -5,7 +5,7 @@
       :class="collapsed ? 'lg:w-14 w-12 sm:w-16' : 'lg:w-40 w-12 sm:w-16'"
   >
 
-  <!-- Logo -->
+    <!-- Logo -->
     <div class="h-8 lg:h-32 flex items-center justify-center">
       <img src="../assets/svgs/logo-mini.svg"
            alt="Logo"
@@ -35,7 +35,7 @@
     </button>
 
     <!-- 上部菜单 -->
-    <nav class="flex-1 py-4 overflow-y-hidden">
+    <nav class="flex-1 py-4 overflow-hidden">
       <ul class="space-y-1">
         <li v-for="item in menuItems" :key="item.path"
             class="relative"
@@ -90,22 +90,15 @@
                      class="w-full h-full object-contain"
                      :class="isActive(item.path) ? 'icon-active' : 'icon-normal'"/>
               </span>
-              <span class="hidden text-base font-bold transition-all duration-300"
+              <span class="hidden lg:inline-block text-base font-bold transition-all duration-300 whitespace-nowrap"
                     :class="[isActive(item.path) ? 'text-gray-700' : 'text-white',
-                             collapsed ? 'hidden' : 'inline-block']">
+                             collapsed ? 'opacity-0 w-0 overflow-hidden' : 'opacity-100']">
                 {{ item.label }}
               </span>
             </RouterLink>
           </li>
         </ul>
       </nav>
-
-      <!-- 版权 -->
-      <div class="hidden lg:flex items-center gap-1 py-2 px-4 text-gray-400 text-xs transition-opacity duration-300"
-           :class="collapsed ? 'opacity-0 pointer-events-none hidden h-0' : 'opacity-100'">
-        <img src="../assets/svgs/copyright.svg" class="w-4 h-4"/>
-        <span>2025 GoFurry</span>
-      </div>
     </div>
 
     <div class="absolute top-0 right-0 h-full w-1 pointer-events-none
@@ -139,7 +132,7 @@ import featherIcon from '@/assets/svgs/feather.svg'
 import pawIcon from '@/assets/svgs/paw.svg'
 import panelIcon from '@/assets/svgs/panel.svg'
 
-const { collapsed } = defineProps<{ collapsed: boolean }>()
+const { collapsed = true } = defineProps<{ collapsed?: boolean }>()
 const emit = defineEmits<{ (e: 'toggle'): void }>()
 
 const route = useRoute()

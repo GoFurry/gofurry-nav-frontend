@@ -2,8 +2,8 @@ import { createRequest } from '@/utils/request.ts'
 import type {
     AnonymousReviewModel,
     GameGroupRecord,
-    GamePanelRecord,
-    SearchItemModel,
+    GamePanelRecord, GameTagRecord,
+    SearchItemModel, SearchPageQueryRequest, SearchPageResponse,
     TopPriceRecord
 } from '@/types/game.ts'
 
@@ -35,4 +35,12 @@ export function getSearchSimple(lang: string, txt: string): Promise<SearchItemMo
 
 export function getLatestReview(): Promise<AnonymousReviewModel[]> {
     return gameRequest.get("/review/latest")
-} 
+}
+
+export function getTagList(lang: string): Promise<GameTagRecord[]> {
+    return gameRequest.get("/game/tag/list", { params: { lang: lang } })
+}
+
+export function searchGameAdvanced(query: SearchPageQueryRequest, lang: string): Promise<SearchPageResponse> {
+    return gameRequest.post("/search/game/page", {...query,lang})
+}

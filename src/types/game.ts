@@ -73,3 +73,43 @@ export interface AnonymousReviewModel {
     game_name: string
     game_cover: string
 }
+
+export interface GameTagRecord {
+    id: string
+    name: string
+    prefix: string
+    game_count: number
+}
+
+// 查询请求结构
+export interface SearchPageQueryRequest {
+    pageNum: number
+    pageSize: number
+    content?: string
+    pub_start_time?: string // 格式: "2025-12-29 22:56:00"
+    pub_end_time?: string
+    update_start_time?: string
+    update_end_time?: string
+    score?: boolean
+    remark_order?: boolean
+    time_order?: boolean
+    tag_list?: number[]
+}
+
+// 分页响应类型
+export interface SearchPageResponseItem {
+    id: string
+    name: string
+    info: string
+    cover: string
+    update_time: string
+    release_date: string
+    remark_count: number
+    avg_score: number
+    appid: number
+}
+
+export interface SearchPageResponse {
+    total: number
+    list: SearchPageResponseItem[]
+}

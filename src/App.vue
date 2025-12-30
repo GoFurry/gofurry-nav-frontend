@@ -2,6 +2,7 @@
   <div class="flex bg-gray-50 min-h-screen">
     <!-- 菜单栏 -->
     <Sidebar
+        class="z-999"
         :collapsed="collapsed"
         @toggle="collapsed = !collapsed"
     />
@@ -22,5 +23,5 @@
 import { ref } from 'vue'
 import Sidebar from '@/components/Sidebar.vue'
 
-const collapsed = ref(false)
+const collapsed = ref(true)
 </script>

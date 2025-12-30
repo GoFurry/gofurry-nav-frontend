@@ -10,7 +10,16 @@
     "copy": "点击复制",
     "copied": "已复制！",
     "game": "游戏",
-    "time": "时间"
+    "time": "时间",
+    "cancel": "取消",
+    "confirm": "确定",
+    "query": "查询",
+    "sort": "排序",
+    "tag": "标签",
+    "keyword": "关键词",
+    "pageSize": "页大小",
+    "total": "共",
+    "record": "条"
   },
   "navbar": {
     "slogan": "GoFurry 是致力于维护兽圈基础建设的公益组织。"
@@ -201,7 +210,15 @@
       "kickstarter": "全球知名的创意项目众筹平台"
     },
     "search": {
-      "simple": "搜索游戏"
+      "simple": "搜索游戏",
+      "advancedFilter": "高级筛选",
+      "publishTime": "发布时间",
+      "updateTime": "更新时间",
+      "highestRating": "最高评分",
+      "mostComments": "最多评论",
+      "latestInfo": "最新情报",
+      "comment": "评论",
+      "jumpPage": "跳转到页"
     }
   }
 }
