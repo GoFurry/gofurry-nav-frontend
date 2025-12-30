@@ -25,7 +25,7 @@
         >
           <div
               v-if="hoverGroup === group.id"
-              class="absolute z-10 bg-white border border-gray-200 shadow-lg rounded-lg p-3 w-64 text-sm text-gray-700"
+              class="absolute z-10 bg-orange-50 border border-gray-200 shadow-lg rounded-lg p-3 w-64 text-sm text-gray-700"
               :style="{ left: `${groupHoverLeft}px`, top: `${groupHoverTop}px` }"
               @mouseenter="hoveringGroupDetail = true"
               @mouseleave="hoveringGroupDetail = false"
@@ -38,9 +38,9 @@
       <!-- 站点网格 -->
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-4 mt-2 relative">
         <div
-            v-for="site in sites.filter(s => group.sites.includes(s.id) && s.nsfw !== '1')"
+            v-for="site in filteredSites(group)"
             :key="`${group.id}-${site.id}`"
-            class="relative bg-white rounded-xl shadow hover:shadow-lg transition-shadow duration-200 p-4 cursor-pointer flex gap-3"
+            class="relative bg-orange-50 rounded-xl shadow hover:shadow-lg transition-shadow duration-200 p-4 cursor-pointer flex gap-3"
             @click="goDomain(getDomains(site))"
             @mouseenter="onSiteMouseEnter(group.id, site.id, $event)"
             @mouseleave="onSiteMouseLeave"
@@ -96,7 +96,7 @@
           >
             <div
                 v-if="hoverSite === `${group.id}-${site.id}`"
-                class="absolute z-20 bg-white border border-gray-200 shadow-xl rounded-xl p-4 w-72 text-sm text-gray-700"
+                class="absolute z-20 bg-orange-50 border border-gray-200 shadow-xl rounded-xl p-4 w-72 text-sm text-gray-700"
                 :style="{ left: `${hoverLeft}px`, top: `${hoverTop}px` }"
                 @mouseenter="hoveringDetail = true"
                 @mouseleave="hoveringDetail = false"
@@ -120,7 +120,7 @@
                     <span class="text-gray-800 truncate">{{ domain }}</span>
                   </div>
                   <div class="text-gray-500 text-right shrink-0">
-                    {{ pingData[domain]?.loss + "%" }}/{{ pingData[domain]?.delay }}
+                    {{ pingData[domain]?.loss + '%' }}/{{ pingData[domain]?.delay }}
                   </div>
                 </div>
               </div>
@@ -138,6 +138,7 @@
 
 <script setup lang="ts">
 import { ref, onMounted, onUnmounted, nextTick, watch } from 'vue'
+import { useRoute, useRouter } from 'vue-router'
 import { useLangStore } from '@/store/langStore.ts'
 import { getGroups, getSites, getPing } from '@/utils/api/nav.ts'
 import type { Group, Site, Delay } from '@/types/nav.ts'
@@ -184,19 +185,32 @@ let timer: ReturnType<typeof setInterval> | null = null
 const logoPrefix = import.meta.env.VITE_SITE_LOGO_PREFIX_URL || ''
 const defaultLogo = 'defaultLogo.svg'
 
-// 站点悬浮
+// 悬浮控制
 const hoverSite = ref<string | null>(null)
 const hoveringDetail = ref(false)
 let hideTimer: ReturnType<typeof setTimeout> | null = null
 const hoverLeft = ref(0)
 const hoverTop = ref(0)
 
-// 分组悬浮
 const hoverGroup = ref<string | null>(null)
 const hoveringGroupDetail = ref(false)
 let hideGroupTimer: ReturnType<typeof setTimeout> | null = null
 const groupHoverLeft = ref(0)
 const groupHoverTop = ref(0)
+
+// 路由 mode
+const route = useRoute()
+const router = useRouter()
+const displayMode = ref<'sfw' | 'nsfw'>(
+    route.query.mode === 'nsfw' ? 'nsfw' : 'sfw'
+)
+
+watch(
+    () => route.query.mode,
+    (val) => {
+      displayMode.value = val === 'nsfw' ? 'nsfw' : 'sfw'
+    }
+)
 
 // 请求数据
 async function loadData() {
@@ -217,7 +231,6 @@ async function loadData() {
   }
 }
 
-// 解析数据
 function parsePingData(data: Record<string, string>) {
   const parsed: Record<string, Delay> = {}
   for (const domain in data) {
@@ -234,6 +247,13 @@ function parsePingData(data: Record<string, string>) {
     }
   }
   pingData.value = parsed
+}
+
+// 根据 mode 过滤站点
+function filteredSites(group: Group): Site[] {
+  return sites.value.filter(
+      s => group.sites.includes(s.id) && (displayMode.value === 'nsfw' || s.nsfw !== '1')
+  )
 }
 
 function getDomains(site: Site): string[] {
@@ -309,11 +329,13 @@ function onGroupMouseLeave() {
 }
 
 // 路由跳转
-import { useRouter } from 'vue-router'
-const router = useRouter()
 function goSite(siteId: string, domain: string) {
-  router.push(`/site/${siteId}?domain=${domain}`)
+  router.push({
+    path: `/site/${siteId}`,
+    query: { domain, mode: displayMode.value }
+  })
 }
+
 function goDomain(domain: string[]) {
   window.open(`https://${domain[0]}`, '_blank')
 }
@@ -331,10 +353,7 @@ onMounted(() => {
   }, 60000)
 })
 
-// 监听语言切换
-watch(() => langStore.lang, () => {
-  loadData()
-})
+watch(() => langStore.lang, () => loadData())
 
 onUnmounted(() => {
   if (timer) clearInterval(timer)
