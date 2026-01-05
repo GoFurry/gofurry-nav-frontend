@@ -72,7 +72,7 @@
                       <div><span class="font-bold">ISP:</span> {{ record.isp || t('site.siteDnsPanel.unk') }}</div>
                       <div><span class="font-bold">{{ t('site.siteDnsPanel.country') }}:</span> {{ record.country || t('site.siteDnsPanel.unk') }}</div>
                       <div><span class="font-bold">{{ t('site.siteDnsPanel.city') }}:</span> {{ record.city || t('site.siteDnsPanel.unk') }}</div>
-                      <div><span class="font-bold">{{ t('site.siteDnsPanel.reversePtr') }}:</span> {{ record.reverse_ptr || '—' }}</div>
+                      <div><span class="font-bold">{{ t('site.siteDnsPanel.reversePtr') }}:</span> {{ record.reverse_ptr || t("site.siteDnsPanel.none") }}</div>
                       <div><span class="font-bold">{{ t('site.siteDnsPanel.hijacked') }}:</span> {{ record.hijacked ? t('common.yes') : t('common.no') }}</div>
 
                       <!-- 子记录 -->
@@ -96,9 +96,9 @@
                           >
                             <td class="px-2 py-1">{{ child.type }}</td>
                             <td class="px-2 py-1">{{ child.value }}</td>
-                            <td class="px-2 py-1">{{ child.asn || '—' }}</td>
-                            <td class="px-2 py-1">{{ child.country || '—' }}</td>
-                            <td class="px-2 py-1">{{ child.isp || '—' }}</td>
+                            <td class="px-2 py-1">{{ child.asn || t("site.siteDnsPanel.none") }}</td>
+                            <td class="px-2 py-1">{{ child.country || t("site.siteDnsPanel.none") }}</td>
+                            <td class="px-2 py-1">{{ child.isp || t("site.siteDnsPanel.none") }}</td>
                           </tr>
                           </tbody>
                         </table>

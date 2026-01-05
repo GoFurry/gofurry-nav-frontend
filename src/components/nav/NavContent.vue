@@ -46,11 +46,13 @@
             @mouseleave="onSiteMouseLeave"
         >
           <!-- 左侧Logo -->
-          <img
-              :src="`${logoPrefix ? `${logoPrefix}/` : ''}${site.icon || defaultLogo}`"
-              alt="icon"
-              class="w-12 h-12 rounded flex-shrink-0"
-          />
+          <div class="w-12 h-12 rounded flex-shrink-0 overflow-hidden">
+            <img
+                :src="`${logoPrefix ? `${logoPrefix}/` : ''}${site.icon || defaultLogo}`"
+                alt="icon"
+                class="w-full h-full object-cover"
+            />
+          </div>
 
           <!-- 右侧内容 -->
           <div class="flex-1 flex flex-col overflow-hidden">

@@ -3,7 +3,7 @@
     <!-- 搜索框 -->
     <div class="relative">
       <img
-          src="@/assets/svgs/search.svg"
+          src="../../../assets/svgs/search.svg"
           class="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 opacity-60"
           alt="search"
       />
@@ -57,9 +57,9 @@
 <script setup lang="ts">
 import { ref, watch } from "vue";
 import { useRouter } from "vue-router";
-import { getSearchSimple } from "@/utils/api/game";
+import { getSearchSimple } from "@/utils/api/game.ts";
 import type { SearchItemModel } from "@/types/game.ts";
-import { useLangStore } from "@/store/langStore";
+import { useLangStore } from "@/store/langStore.ts";
 import { i18n } from '@/main.ts'
 
 const { t } = i18n.global

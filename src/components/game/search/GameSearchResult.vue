@@ -32,7 +32,7 @@
               @click.stop
           >
             <img
-                src="@/assets/icons/steam.svg"
+                src="../../../assets/icons/steam.svg"
                 alt="Steam"
                 class="w-4 h-4 opacity-70 hover:opacity-100 transition"
             />
@@ -46,7 +46,7 @@
         <div class="mt-2 text-xs text-gray-500 flex justify-between">
           <span class="flex items-center gap-1">
             <img
-                src="@/assets/svgs/star.svg"
+                src="../../../assets/svgs/star.svg"
                 alt="评分"
                 class="w-3.5 h-3.5"
             />
@@ -70,8 +70,8 @@
 
 <script setup lang="ts">
 import { useRouter } from 'vue-router'
-import GamePagination from '@/components/game/GamePagination.vue'
-import type { SearchPageResponseItem } from '@/types/game'
+import GamePagination from '@/components/game/search/GamePagination.vue'
+import type { SearchPageResponseItem } from '@/types/game.ts'
 import { i18n } from '@/main.ts'
 
 const { t } = i18n.global

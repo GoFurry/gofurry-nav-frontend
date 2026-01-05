@@ -43,9 +43,9 @@
 
 <script setup lang="ts">
 import { watch, ref, reactive, onMounted } from 'vue'
-import GameSidebarSearch from '@/components/game/GameSidebarSearch.vue'
-import GameSearchFilter from '@/components/game/GameSearchFilter.vue'
-import GameSearchResult from '@/components/game/GameSearchResult.vue'
+import GameSidebarSearch from '@/components/game/main/GameSidebarSearch.vue'
+import GameSearchFilter from '@/components/game/search/GameSearchFilter.vue'
+import GameSearchResult from '@/components/game/search/GameSearchResult.vue'
 import { searchGameAdvanced, getTagList } from '@/utils/api/game'
 import type {
   SearchPageResponseItem,

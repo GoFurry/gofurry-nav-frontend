@@ -4,17 +4,17 @@
     <div class="flex-1 bg-white/1 backdrop-blur-md rounded-xl p-5 shadow">
       <div class="flex justify-between items-center mb-4">
         <h2 class="font-bold text-lg">{{ t("game.panel.playerCount") }}</h2>
-        <div class="text-sm text-gray-500">{{ t("game.panel.playerCountDesc") }}</div>
+        <div class="text-sm text-gray-500 hidden sm:table-cell">{{ t("game.panel.playerCountDesc") }}</div>
       </div>
 
       <table class="w-full text-sm table-fixed">
         <thead class="text-gray-600">
         <tr>
-          <th class="w-28 text-center"></th>
+          <th class="w-28 text-center hidden sm:table-cell"></th>
           <th class="text-left">{{ t("common.game") }}</th>
           <th class="text-right">{{ t("game.panel.recentOnline") }}</th>
-          <th class="text-right">{{ t("game.panel.onlinePeak") }}</th>
-          <th class="text-right">{{ t("common.time") }}</th>
+          <th class="text-right hidden sm:table-cell">{{ t("game.panel.onlinePeak") }}</th>
+          <th class="text-right hidden sm:table-cell">{{ t("common.time") }}</th>
         </tr>
         </thead>
 
@@ -24,13 +24,13 @@
             :key="item.id"
             class="group odd:bg-orange-50 even:bg-white/1 hover:bg-orange-100 transition-colors duration-150 h-16"
         >
-          <td class="px-2">
+          <td class="px-2 hidden sm:table-cell">
             <img :src="item.header" class="h-full w-full object-cover" alt="cover" />
           </td>
           <td class="px-2 font-medium truncate max-w-[200px]">{{ item.name }}</td>
           <td class="text-right px-2 font-semibold truncate">{{ item.count_recent }}</td>
-          <td class="text-right px-2 font-semibold truncate">{{ item.count_peak }}</td>
-          <td class="text-right px-2 text-gray-500 text-xs truncate">{{ formatTime(item.collect_time) }}</td>
+          <td class="text-right px-2 font-semibold truncate hidden sm:table-cell">{{ item.count_peak }}</td>
+          <td class="text-right px-2 text-gray-500 text-xs truncate hidden sm:table-cell">{{ formatTime(item.collect_time) }}</td>
         </tr>
         </tbody>
       </table>
@@ -50,17 +50,17 @@
     <div class="flex-1 bg-white/1 backdrop-blur-md rounded-xl p-5 shadow">
       <div class="flex justify-between items-center mb-4">
         <h2 class="font-bold text-lg">{{ t("game.panel.topPrice") }}</h2>
-        <div class="text-sm text-gray-500">{{ t("game.panel.topPriceDesc") }}</div>
+        <div class="text-sm text-gray-500 hidden sm:table-cell">{{ t("game.panel.topPriceDesc") }}</div>
       </div>
 
       <table class="w-full text-sm table-fixed">
         <thead class="text-gray-600">
         <tr>
-          <th class="w-28 text-center"></th>
+          <th class="w-28 text-center hidden sm:table-cell"></th>
           <th class="text-left">{{ t("common.game") }}</th>
-          <th class="text-right">{{ t("game.panel.global") }}</th>
+          <th class="text-right hidden sm:table-cell">{{ t("game.panel.global") }}</th>
           <th class="text-right">{{ t("game.panel.china") }}</th>
-          <th class="text-right">{{ t("game.panel.discount") }}</th>
+          <th class="text-right hidden sm:table-cell">{{ t("game.panel.discount") }}</th>
         </tr>
         </thead>
 
@@ -70,15 +70,15 @@
             :key="item.id"
             class="group odd:bg-orange-50 even:bg-white/1 hover:bg-orange-100 transition-colors duration-150 h-16"
         >
-          <td class="px-2">
+          <td class="px-2 hidden sm:table-cell">
             <img :src="item.header" class="h-full w-full object-cover" alt="cover" />
           </td>
           <td class="px-2 font-medium truncate max-w-[200px]">{{ item.name }}</td>
-          <td class="text-right px-2 font-semibold">{{ formatPrice(item.global_price, true) }}</td>
+          <td class="text-right px-2 font-semibold hidden sm:table-cell">{{ formatPrice(item.global_price, true) }}</td>
           <td class="text-right px-2 font-semibold">{{ formatPrice(item.china_price, false) }}</td>
-          <td class="text-right px-2 font-bold" :class="item.discount > 0 ? 'text-red-500' : 'text-gray-400'">
+          <td class="text-right px-2 font-bold hidden sm:table-cell" :class="item.discount > 0 ? 'text-red-500' : 'text-gray-400'">
             <span v-if="item.discount > 0">-{{ item.discount }}%</span>
-            <span v-else>—</span>
+            <span v-else>{{t("game.panel.none")}}</span>
           </td>
         </tr>
         </tbody>

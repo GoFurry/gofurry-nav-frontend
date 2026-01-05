@@ -26,8 +26,8 @@
 
 <script setup lang="ts">
 import bgGrid from "@/assets/pngs/bg-grid.png";
-import GameInfoPanel from "@/components/game/GameInfoPanel.vue";
-import SideBarPanel from "@/components/game/SideBarPanel.vue";
+import GameInfoPanel from "@/components/game/main/GameInfoPanel.vue";
+import SideBarPanel from "@/components/game/main/SideBarPanel.vue";
 import Footer from '@/components/Footer.vue'
 import NavBar from '@/components/NavBar.vue'
 </script>

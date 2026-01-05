@@ -33,12 +33,12 @@
 
 <script setup lang="ts">
 import {ref, onMounted, watch, computed} from "vue";
-import GameInfoGroup from "@/components/game/GameInfoGroup.vue";
-import GameStatsPanels from "@/components/game/GameStatsPanels.vue";
+import GameInfoGroup from "@/components/game/main/GameInfoGroup.vue";
+import GameStatsPanels from "@/components/game/main/GameStatsPanels.vue";
 import { useLangStore } from '@/store/langStore.ts'
 import { getGameMainInfo, getGameMainPanel } from "@/utils/api/game.ts"
 import type { GameGroupRecord, BaseGameInfoRecord, GamePanelRecord } from "@/types/game.ts"
-import GameUpdateNews from "@/components/game/GameUpdateNews.vue";
+import GameUpdateNews from "@/components/game/main/GameUpdateNews.vue";
 
 const langStore = useLangStore()
 const lang = computed(() => langStore.lang)

@@ -165,7 +165,7 @@
 <script setup lang="ts">
 import { ref } from "vue";
 import { useRouter } from "vue-router";
-import { getRandomGame } from "@/utils/api/game";
+import { getRandomGame } from "@/utils/api/game.ts";
 import { i18n } from "@/main.ts";
 
 const { t } = i18n.global;

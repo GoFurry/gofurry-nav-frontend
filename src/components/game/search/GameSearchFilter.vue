@@ -145,10 +145,10 @@
 
 <script setup lang="ts">
 import { ref, reactive, watch, onMounted } from 'vue'
-import type { GameTagRecord, SearchPageQueryRequest } from '@/types/game'
+import type { GameTagRecord, SearchPageQueryRequest } from '@/types/game.ts'
 import { VueDatePicker } from '@vuepic/vue-datepicker'
 import '@vuepic/vue-datepicker/dist/main.css'
-import { i18n } from '@/main'
+import { i18n } from '@/main.ts'
 
 const { t } = i18n.global
 

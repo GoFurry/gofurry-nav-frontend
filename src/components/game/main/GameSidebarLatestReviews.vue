@@ -65,9 +65,9 @@
           </div>
 
           <!-- IP + 时间 -->
-          <div class="flex items-center justify-between">
+          <div class="flex items-center justify-between gap-1">
             <span>{{ item.ip }}</span>
-            <span class="whitespace-nowrap">
+            <span class="whitespace-nowrap truncate">
               {{ formatTimeAgo(item.time) }}
             </span>
           </div>

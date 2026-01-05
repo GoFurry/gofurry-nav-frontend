@@ -2,7 +2,7 @@
   <div class="bg-white/1 backdrop-blur-md rounded-2xl shadow p-5 mb-8">
     <div class="flex items-center justify-between mb-4">
       <h2 class="font-bold text-lg">{{ t("game.news.title") }}</h2>
-      <div class="text-sm text-gray-500">{{ t("game.news.desc") }}</div>
+      <div class="text-sm text-gray-500 hidden sm:block">{{ t("game.news.desc") }}</div>
     </div>
 
     <div class="overflow-x-auto">
@@ -10,7 +10,7 @@
         <div
             v-for="(news) in newsList"
             :key="news.id"
-            class="relative flex-shrink-0 w-72 rounded-lg p-3 mb-1 cursor-pointer transition bg-orange-50 hover:bg-orange-100"
+            class="relative flex-shrink-0 w-36 sm:w-72 rounded-lg p-3 mb-1 cursor-pointer transition bg-orange-50 hover:bg-orange-100"
             @click="openUrl(news.url)"
             ref="newsRefs"
         >
@@ -18,7 +18,7 @@
           <img
               :src="news.header"
               alt="cover"
-              class="w-full h-36 object-cover rounded-lg mb-2"
+              class="w-full object-cover rounded-lg mb-2"
               ref="coverRefs"
               @mouseenter="onNewsMouseEnter(news, $event)"
               @mouseleave="onNewsMouseLeave"
@@ -30,7 +30,7 @@
           <!-- 时间 + 作者 -->
           <div class="text-xs text-gray-500 mt-1 flex justify-between">
             <span>{{ formatTime(news.post_time) }}</span>
-            <span>{{ news.author }}</span>
+            <span class="hidden sm:block">{{ news.author }}</span>
           </div>
 
           <!-- 简短描述 -->
@@ -68,7 +68,7 @@
 <script setup lang="ts">
 import { ref, onMounted, nextTick, watch } from "vue";
 import { i18n } from '@/main.ts';
-import { useLangStore } from '@/store/langStore';
+import { useLangStore } from '@/store/langStore.ts';
 import { getLatestGameNews } from "@/utils/api/game.ts";
 import type { TopPriceRecord, NewsBaseModel } from "@/types/game.ts";
 
