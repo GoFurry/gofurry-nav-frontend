@@ -8,7 +8,7 @@
         <!-- 第一行 -->
         <div class="flex items-center gap-1">
           <img src="@/assets/svgs/copyright.svg" alt="cc" class="w-4 h-4" />
-          <span>2025 GoFurry {{ t('footer.rights') }}</span>
+          <span>{{ currentYear }} GoFurry {{ t('footer.rights') }}</span>
         </div>
 
         <!-- 第二行 -->
@@ -35,8 +35,11 @@
 
 <script setup lang="ts">
 import {i18n} from "@/main.ts";
+import {ref} from 'vue';
 
-const t = (key: string) => i18n.global.t(key)
+const currentYear = ref(new Date().getFullYear());
+
+const t = (key: string) => i18n.global.t(key);
 </script>
 
 <style scoped>
