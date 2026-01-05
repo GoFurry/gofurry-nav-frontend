@@ -1,8 +1,8 @@
 import { createRequest } from '@/utils/request.ts'
 import type {
-    AnonymousReviewModel,
+    AnonymousReviewModel, GameBaseInfoResponse,
     GameGroupRecord,
-    GamePanelRecord, GameTagRecord,
+    GamePanelRecord, GameTagRecord, RecommendedModel, RemarkResponse,
     SearchItemModel, SearchPageQueryRequest, SearchPageResponse,
     TopPriceRecord
 } from '@/types/game.ts'
@@ -43,4 +43,16 @@ export function getTagList(lang: string): Promise<GameTagRecord[]> {
 
 export function searchGameAdvanced(query: SearchPageQueryRequest, lang: string): Promise<SearchPageResponse> {
     return gameRequest.post("/search/game/page", {...query,lang})
+}
+
+export function getGameBaseInfo(id: string, lang: string): Promise<GameBaseInfoResponse> {
+    return gameRequest.get("/game/info", { params: { id: id, lang: lang } })
+}
+
+export function getGameRemark(id: string): Promise<RemarkResponse> {
+    return gameRequest.get("/game/remark", { params: { id: id } })
+}
+
+export function getRecommendedGame(id: string, lang: string): Promise<RecommendedModel[]> {
+    return gameRequest.get("/recommend/game/CBF", { params: { id: id, lang: lang } })
 }

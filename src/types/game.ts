@@ -113,3 +113,104 @@ export interface SearchPageResponse {
     total: number
     list: SearchPageResponseItem[]
 }
+
+export interface GameBaseInfoResponse {
+    name: string
+    info: string
+    create_time: string
+    update_time: string
+    resources: KvModel[]
+    groups: KvModel[]
+    links: KvModel[]
+    release_date: string
+    developers: string[]
+    publishers: string[]
+    appid: number
+    cover: string
+    platform: string
+    price_list: PriceModel[]
+    news: NewsModel[]
+    tags: TagModel[]
+    supported_languages: string
+    required_age: string
+    website: string
+    detailed_description: string
+    about_the_game: string
+    support: SupportModel
+    screenshots: ScreenshotsModel[]
+    movies: MoviesModel[]
+    pc_requirements: RequirementsModel
+}
+
+export interface RequirementsModel {
+    id: number
+    minimum: string
+    recommended: string
+}
+
+export interface MoviesModel {
+    id: number
+    name: string
+    thumbnail: string
+    dash_av1: string
+    dash_h264: string
+    hls_h264: string
+}
+
+export interface ScreenshotsModel {
+    id: number
+    path_thumbnail: string
+    path_full: string
+}
+
+export interface SupportModel {
+    url: string
+    email: string
+}
+
+export interface KvModel {
+    key: string
+    value: string
+}
+
+export interface PriceModel {
+    price: string
+    country: string
+}
+
+export interface NewsModel {
+    headline: string
+    content: string
+    post_time: string
+    author: string
+    url: string
+}
+
+export interface TagModel {
+    id: string
+    name: string
+    desc: string
+}
+
+export interface RemarkResponse {
+    total: number
+    avg_score: number
+    remarks: RemarkModel[]
+}
+
+export interface RemarkModel {
+    region: string
+    content: string
+    score: number
+    create_time: string
+    ip: string
+    name: string
+}
+
+export interface RecommendedModel {
+    id: string
+    name: string
+    info: string
+    similarity: number
+    appid: string
+}
