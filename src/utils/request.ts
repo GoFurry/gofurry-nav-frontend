@@ -4,7 +4,7 @@ import type { AxiosInstance, InternalAxiosRequestConfig } from 'axios'
 /*
 * @Desc: Axios封装
 * @Author: 福狼
-* @Version: V1.0.0
+* @Version: V1.0.1
 * */
 
 /*
@@ -38,6 +38,7 @@ export function createRequest(baseURL?: string): AxiosInstance {
         (response) => {
             if (response.data.code !== 1) {
                 console.error('接口返回错误:', response.data)
+                return [] // 置空避免污染前端入参
             }
             return response.data.data
         },
